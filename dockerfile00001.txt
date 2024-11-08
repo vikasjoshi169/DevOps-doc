@@ -67,7 +67,7 @@ FROM amazonlinux:2
 # Update the system and install necessary packages
 RUN yum update -y && \
     yum install -y git tar wget unzip python3 python3-pip && \
-    amazon-linux-extras install java-openjdk11 -y && \
+    yum install  -y java-17-amazon-corretto*  && \
     yum clean all
 
 # Set up Maven
